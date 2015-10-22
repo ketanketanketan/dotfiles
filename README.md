@@ -1,10 +1,87 @@
 # dotfiles
-The ketan dotfiles
+Ketan's dotfiles
+
+### diff and difftool
+
+This made Kaleidoscope my default diff and merge tool with git
+
+```
+[gitconfig]
+
+    # Using Kaleidoscope as main diff and merge tool
+
+    [difftool "Kaleidoscope"]
+        cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+    [diff]
+        tool = Kaleidoscope
+    [difftool]
+        prompt = false
+
+    [mergetool "Kaleidoscope"]
+        cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+        trustexitcode = true
+    [merge]
+        tool = Kaleidoscope
+    [mergetool]
+        prompt = false
+```
 
 
-forked:
+Run `git difftool` on the current folder to see the diffs in the default difftool and I get this prompt:
 
-# Mathias’s dotfiles
+```
+This message is displayed because 'diff.tool' is not configured.
+See 'git difftool --tool-help' or 'git help config' for more details.
+'git difftool' will now attempt to use one of the following tools:
+opendiff kompare emerge vimdiff
+
+Viewing (1/3): '.bash_profile'
+Launch 'opendiff' [Y/n]: n
+```
+
+
+Run `git difftool --tool-help`
+
+```
+$ git difftool --tool-help
+'git difftool --tool=<tool>' may be set to one of the following:
+        emerge
+        opendiff
+        vimdiff
+        vimdiff2
+        vimdiff3
+
+The following tools are valid, but not currently available:
+        araxis
+        bc
+        bc3
+        codecompare
+        deltawalker
+        diffmerge
+        diffuse
+        ecmerge
+        gvimdiff
+        gvimdiff2
+        gvimdiff3
+        kdiff3
+        kompare
+        meld
+        p4merge
+        tkdiff
+        xxdiff
+
+Some of the tools listed above only work in a windowed
+environment. If run in a terminal-only session, they will fail.
+```
+
+
+- `git help config`
+
+
+- - - - 
+
+
+# forked: Mathias’s dotfiles
 
 ![Screenshot of my shell prompt](http://i.imgur.com/EkEtphC.png)
 
