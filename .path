@@ -4,7 +4,8 @@ export PATH="/usr/local/sbin:$PATH"
 
 # eventually look at this
 # gist: https://github.com/eriwen/dotfiles/blob/master/.paths
-#export JAVA_HOME=/Library/Java/Home
+
+# export JAVA_HOME=/Library/Java/Home
 # export JAVA_HOME=$(/usr/libexec/java_home)
 # export GRADLE_HOME=/usr/local/share/gradle
 # export GRAILS_HOME=/usr/local/share/grails
@@ -23,4 +24,3 @@ export PATH="/usr/local/sbin:$PATH"
 
 # export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:.:${HOME}/.dotfiles/.scripts:${NPM_HOME}/bin:${JAVA_HOME}/bin:${GROOVY_HOME}/bin:${GRAILS_HOME}/bin:${GRADLE_HOME}/bin:${NODE_PATH}/bin:${KAFKA_HOME}/bin:${CASSANDRA_HOME}/bin:${MYSQL_HOME}/bin:${PEBBLE_HOME}/bin
 # export DYLD_LIBRARY_PATH=${MYSQL_HOME}/lib:$DYLD_LIBRARY_PATH
-
