@@ -1,6 +1,18 @@
 # dotfiles
 Ketan's dotfiles
 
+### symbolic links
+
+Work Machine: 
+
+- .bash_profile
+- .functions
+- .path
+
+### hard copied over
+
+- .vim/*
+
 ### diff and difftool
 
 This made Kaleidoscope my default diff and merge tool with git
