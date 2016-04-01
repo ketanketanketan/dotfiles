@@ -27,7 +27,7 @@
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
 	branches = branch -a
-	remotes = remote -v
+	remotes = remote -vshell
 
 	# Amend the currently staged files to the latest commit
 	amend = commit --amend --reuse-message=HEAD
@@ -110,10 +110,10 @@
 
 [color "diff"]
 
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
+	meta = 4
+	frag = 6 # cyan line info
+	old = 1 # red - deletions
+	new = 2 # green - additions
 
 [color "status"]
 
@@ -125,10 +125,18 @@
 
 	# Detect copies as well as renames
 	renames = copies
+	tool = Kaleidoscope
 
 [diff "bin"]
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+	prompt = false
+
 
 [help]
 
