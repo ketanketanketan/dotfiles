@@ -181,3 +181,7 @@
 [user]
 	name = Ketan Patel
 	email = kpatel2@apple.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
